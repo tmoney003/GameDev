@@ -1,0 +1,69 @@
+<h1 align=center> All Javascript by Tanner </h1>
+
+<script>
+function my01(){
+   document.all.myArea01.value = 'wow it worked'
+}
+</script>
+
+<input type=text id="myText01" value="Blank"><br>
+
+<textarea id="myArea01" rows=4 cols=70></textarea><br>
+
+<input type=button value="Output and Function" onClick="{
+   my01()
+}">
+<input type=button value="Input" onClick="{ 
+   document.all.myArea01.value = document.all.myText01.value
+}">
+
+<input type=button value="loops" onClick="{
+   document.all.myArea01.value = ''
+   for ( x = 1; x <= 3; x++){
+   document.all.myArea01.value += x + ', '
+   }
+}">
+<input type=button value="decisions" onClick="{
+   x = document.all.myText01.value
+   if (x == 9){
+      document.all.myArea01.value = 'Wow a nine'
+   } else {
+    document.all.myArea01.value = 'Wow not a nine'
+   }
+}">
+
+<input type=button value="Arrays" onClick="{
+   myMax = 3 
+   myArray = new Array(myMax)
+   myArray[1] = 'Tanner'
+   myArray[2] = 'Bryce'
+   myArray[3] = 'Shane'
+   document.all.myArea01.value = ''
+   for ( x = 1;  x <= myMax;  x++){
+      document.all.myArea01.value += myArray[1] + ','
+   }
+}"><br>
+
+
+
+<input type=button value="Event 1" onmouseover="{
+   alert('Issa Event')
+}">
+<input type=button value="Object Example" onClick="{
+   x = 3
+bike = {
+   size: 'Big',
+   color: 'gold',
+   condition: 'good',
+   speed: 'fast',
+}
+   document.all.myArea01.value = ' bike.size is ' + bike.size
+   + '. Bike.color is ' +  bike.color  + '. Bike.speed is ' + bike.speed
+}">
+
+
+
+
+
+
+
