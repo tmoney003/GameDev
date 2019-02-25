@@ -1,0 +1,40 @@
+<!-- Saved as T3A05-inner-tanner.html -->
+<h1 align=center> Inner HTML by Tanner </h1>
+<a href="http://www.google.ca">Google</a> 
+<a href="https://gomakethings.com/a-safer-alternative-to-innerhtml-with-vanilla-js/"> Inner HTML</a>
+
+x = <input type=text id="myText01" value=7>
+<div id="myDiv01">My Div Id</div>
+
+<input type=button value="Test innerHTML" onClick="{
+   document.all.myDiv01.innerHTML = 
+'It\'\s cool, <font color=red>inner HTML </font> works'
+}">
+<input type=button value="CSS Style" onClick="{
+   document.all.myDiv01.innerHTML = 
+' <font style=\' color:white; background-color:black; \'> Bizza'+ ' </font> time'
+}">
+<input type=button value="Change textbox to 1" onClick="{
+   document.all.myText01.value = 
+'1'
+}">
+
+<input type=button value="Change InnerHtml To picture" onclick="{
+   document.all.myDiv01.innerHTML = 
+ '<img src=slap.png width=500 length=500>'
+}">
+
+<input type=button value="Change InnerHtml To video" onclick="{
+   document.all.myDiv01.innerHTML = 
+ '<iframe width=560 height=315 src=\https://www.youtube.com/embed/4HEj55Y3taM\ frameborder=\0\ allow=\accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\ allowfullscreen>'
+}">
+
+<input type=button value="Add 1 to textbox" onClick="{
+   x = parseInt(document.all.myText01.value) + 1
+   document.all.myText01.value = x
+
+}"><br>
+Now its time to make my Div a button
+<input type=button value="MAKE IT A BUTTON" onClick="{
+   document.all.myDiv01.innerHTML = 
+'<input type=button value=SecretButton onClick= alert(\'REEEE\')  > ' }">
