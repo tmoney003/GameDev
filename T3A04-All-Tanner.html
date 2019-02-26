@@ -46,9 +46,7 @@ function my01(){
 
 
 
-<input type=button value="Event 1" onmouseover="{
-   alert('Issa Event')
-}">
+
 <input type=button value="Object Example" onClick="{
    x = 3
 bike = {
@@ -59,8 +57,35 @@ bike = {
 }
    document.all.myArea01.value = ' bike.size is ' + bike.size
    + '. Bike.color is ' +  bike.color  + '. Bike.speed is ' + bike.speed
-}">
+}"><br>
+<align = center> List of events <br>
 
+<input type=button value="Event 1" onmouseover="{
+   alert('Issa Event')
+}">
+<br>
+<input type="text" id=myText02 value="Event 2 (Type in here)" onkeypress="myFunction01()">
+
+<script>
+function myFunction01() {
+   document.all.myText02.value = 'A key was pressed'
+   }
+</script><br>
+
+
+<input type=button value="Event 3/4 (hover over)" onmouseout="myFunction02()" 
+   onmouseover="myFunction03()">
+
+<script>
+function myFunction02() { document.all.myText01.value = 'You removed your mouse' 
+}
+</script>
+
+<script>
+function myFunction03() { document.all.myText01.value = 'You entered your mouse'
+}
+</script>
+ 
 
 
 
