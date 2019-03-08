@@ -1,0 +1,43 @@
+<h2 align=center> Auto move Tanner </h2>
+<img src="slap.png" id="slap.png" style="position:relative;
+z-index:-1; left:0px; top:0px; height:100px; width:100px;">
+
+<input type=button value='right' onclick ="{
+   document.getElementById('slap.png').style.left = 
+   parseInt(document.getElementById('slap.png').style.left) + 10 + 'px'
+}">
+
+<script> var myLooping = 0 </script>
+
+<input type=button value="Autoright" onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+      document.getElementById('slap.png').style.left = parseInt(document.getElementById('slap.png').style.left) + 10 + 'px'
+
+      if (parseInt(document.getElementById('slap.png').style.left) > 600){
+         document.getElementById('slap.png').style.left ='0px'
+      }
+
+ }, 60)
+}">
+
+
+<input type=button value="Autoleft" onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+      document.getElementById('slap.png').style.left = parseInt(document.getElementById('slap.png').style.left) - 10 + 'px'
+
+      if (parseInt(document.getElementById('slap.png').style.left) > 0){
+         document.getElementById('slap.png').style.left ='600px'
+      }
+
+ }, 60)
+}">
+
+
+
+</body>
+</html>
+
+
+
