@@ -1,0 +1,58 @@
+<html>
+<head>
+<h2 align=center> WASD By Tanner </h2>
+</head>
+<body onkeydown="{
+   
+   if (event.key == 'd' ) {
+   document.getElementById('slap.png').style.left = 
+parseInt(document.getElementById('slap.png').style.left) + 10 + 'px'
+   }   // d= go right 
+
+
+   if (event.key == 's') {
+document.getElementById('slap.png').style.top =
+parseInt(document.getElementById('slap.png').style.top) + 10 + 'px'
+   }   // s= go down
+
+
+    if (event.key == 'w') {
+document.getElementById('slap.png').style.top =
+parseInt(document.getElementById('slap.png').style.top) - 10 + 'px'
+   }   // w= go up
+
+
+  if (event.key == 'a' ) {
+   document.getElementById('slap.png').style.left = 
+parseInt(document.getElementById('slap.png').style.left) - 10 + 'px'
+   }   // d= go left
+
+//2-------------------------------------------------------------------------
+   if (event.key == 39 ) {
+   document.getElementById('Mario.jfif').style.left = 
+parseInt(document.getElementById('Mario.gif').style.left) + 10 + 'px'
+   }   // Arrow Right= go right 
+
+
+   if (event.key == 's') {
+document.getElementById('Mario.jfif').style.top =
+parseInt(document.getElementById('Mario.gif').style.top) + 10 + 'px'
+   }   // s= go down
+
+
+    if (event.key == 'w') {
+document.getElementById('Mario.gif').style.top =
+parseInt(document.getElementById('Mario.gif').style.top) - 10 + 'px'
+   }   // w= go up
+
+
+  if (event.key == 'a' ) {
+   document.getElementById('Mario.gif').style.left = 
+parseInt(document.getElementById('Mario.gif').style.left) - 10 + 'px'
+   }   // d= go left
+
+
+}">
+
+<img src="slap.png" width="100px" id="slap.png" style="position:relative; z-index:-1; left:0px; top:0px; height:100px"><br>
+<img src="Mario.jfif" width="100px" id="slap.png" style="position:relative; z-index:-1; left:0px; top:0px; height:100px"><br>
