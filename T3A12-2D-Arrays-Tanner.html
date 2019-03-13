@@ -1,0 +1,45 @@
+<h2> T3A12-2D-Arrays-Tanner </h2>
+<input type=button value="Generate a 2D array" onclick="{
+
+   document.getElementById('Div01').innerHTML = ' '
+   let myChart = new Array() 
+   
+   myChart[0] = new Array()
+   myChart[1] = new Array() 
+   myChart[2] = new Array() 
+   myChart[3] = new Array() 
+   myChart[4] = new Array() 
+   myChart[5] = new Array() 
+   myChart[6] = new Array() 
+   myChart[7] = new Array() 
+   myChart[8] = new Array() 
+   myChart[9] = new Array() 
+   myChart[10] = new Array() 
+ 
+
+   myChart[0][0] = 11
+   myChart[0][1] = 12 
+   myChart[0][2] = 13
+   myChart[0][3] = 14 
+   myChart[1][0] = 21
+   myChart[1][1] = 22
+   myChart[1][2] = 23
+   myChart[1][3] = 24
+   myChart[2][0] = 31
+   myChart[2][1] = 32
+   myChart[2][2] = 33
+   myChart[2][3] = 34
+   
+
+   document.getElementById('Div01').innerHTML += `
+	<table border=1>
+	<tr><td> ${myChart[0][0]} </td><td> ${myChart[0][1]} </td><td> ${myChart[0][2]} </td><td> ${myChart[0][3]} </td></tr>
+	<tr><td> ${myChart[1][0]} </td><td> ${myChart[1][1]} </td><td> ${myChart[1][2]} </td><td> ${myChart[1][3]} </td></tr>
+        <tr><td> ${myChart[2][0]} </td><td> ${myChart[2][1]} </td><td> ${myChart[2][2]} </td><td> ${myChart[2][3]} </td></tr>
+        </table>`
+}"><br><br>
+<div id="Div01"> Chart goes here </div> 
+
+
+
+
