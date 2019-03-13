@@ -1,0 +1,51 @@
+<h2><font color=blue>Square up</font></h2>
+
+<script>
+function mySquared(myNumber){
+   document.getElementById('myDiv01').innerHTML = myNumber*myNumber
+}
+
+</script>
+
+<div id="myDiv01">Number Squared</div><br>
+<input type=button value="1" onclick="{
+   myVariable = 1
+   mySquared(myVariable)
+   
+}">
+<input type=button value="2" onclick="{
+   myVariable = 2
+   mySquared(myVariable)
+}">
+<input type=button value="3" onclick="{
+   myVariable = 3
+   mySquared(myVariable)
+}">
+<input type=button value="4" onclick="{
+   myVariable = 4
+   mySquared(myVariable)
+}">
+<input type=button value="5" onclick="{
+   myVariable = 5
+   mySquared(myVariable)
+}">
+<input type=button value="6" onclick="{
+   myVariable = 6
+   mySquared(myVariable)
+}">
+<input type=button value="7" onclick="{
+   myVariable = 7
+   mySquared(myVariable)
+}">
+<input type=button value="8" onclick="{
+   myVariable = 8
+   mySquared(myVariable)
+}"><br>
+<input type=text value="Insert Any Number here" id="myText01">
+<input type=button value="Square the Textbox" onclick="{
+   x = parseInt(document.all.myText01.value)
+   myVariable = x
+   mySquared(myVariable)
+}">
+
+
