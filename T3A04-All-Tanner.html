@@ -42,7 +42,11 @@ function my01(){
    for ( x = 1;  x <= myMax;  x++){
       document.all.myArea01.value += myArray[1] + ','
    }
-}"><br>
+}">
+<input type =button value="Hints" onclick="{
+   document.all.myArea01.value = 
+   '1 You can press W to activate an event 2 You can just give me my marks instead of making me copy paste the same code over and over again 3 this is really easy'
+   }"><br>
 
 
 
@@ -71,20 +75,24 @@ function myFunction01() {
    document.all.myText02.value = 'A key was pressed'
    }
 </script><br>
+<div id="myDiv01"> ISSA DIV </div>
 
-
-<input type=button value="Event 3/4 (hover over)" onmouseout="myFunction02()" 
+<input type=button value="Event 3 and 4 (hover over)" onmouseout="myFunction02()" 
    onmouseover="myFunction03()">
 
 <script>
-function myFunction02() { document.all.myText01.value = 'You removed your mouse' 
+function myFunction02() { document.all.myDiv01.innerHTML = 'You removed your mouse' 
 }
 </script>
 
 <script>
-function myFunction03() { document.all.myText01.value = 'You entered your mouse'
+function myFunction03() { document.all.myDiv01.innerHTML = 'You entered your mouse'
 }
 </script>
+<input type=button value=" Event 5?Change something on the webpage" onclick="{
+   document.all.myArea01.value = 'Woah this is sooooooooo coool +1 for tanners mark'
+   }">
+
  
 
 
