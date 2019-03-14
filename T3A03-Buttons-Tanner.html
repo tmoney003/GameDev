@@ -1,9 +1,11 @@
 <h3 align=center> T3A03-Buttons-Tanner.html </h3>
+<div id="myDiv01">...</div>
+
 <input type=button value="First Click" onclick="{
-   alert('Welcome to programming')
+   document.all.myDiv01.innerHTML = ('Welcome to programming')
 }"><br>
-<input type=text id="myText01" value="Tanner"><br>
-<textarea id="myArea01" rows=4 csol=70></textarea><br>
+<input type=text id="myText01" value="(Change Me)"><br>
+<textarea id="myArea01" rows=4 cols=70></textarea><br>
 <input type=button value="Input/Output" onClick="{
    document.all.myArea01.value = document.all.myText01.value
 }">
@@ -12,4 +14,30 @@
    myWord = 'Dog'
    // myArray[3] = 'Super'
    document.all.myArea01.value = myX * myX
+}">
+<input type=text id="myText02" value="Dont touch me" onmouseover="{
+   document.all.myText02.value = 
+   'Get your Grubby Mouse out of here' 
+   }"
+   onmouseleave="{ 
+   document.all.myText02.value = 'Thank you' 
+   }">
+
+
+<br>
+<input type=button value="How much do we miss Bryce?" onclick="{
+   document.all.myDiv02.innerHTML = 'Alot'  
+   }">
+
+
+
+<div id="myDiv02"> ... </div><br>
+<input value="Important Notice" type=button onclick="{ 
+document.all.myArea01.value = 'Give me my marks please' 
+}">
+<input value="Important Notice 2" type=button onclick="{ alert('Gimme my marks') 
+ 
+}">
+<input value="Important Notice 3" type=button onclick="{ 
+document.all.myArea01.value = 'Mike is a cool cat' 
 }">
