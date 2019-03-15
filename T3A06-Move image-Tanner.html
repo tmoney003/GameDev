@@ -2,10 +2,15 @@
 
 <input type=text value=0  onMouseOver="{
    this.value = 'x = ' + document.getElementById('slap.png').style.left
+  
+}"><br>
+<input type=text value=0  onMouseOver="{
+   this.value = 'y = ' + document.getElementById('slap.png').style.top
 }">
 
 
-<img src="slap.png" width="100px" id="slap.png" style="position:relative; z-index:-1; left:0px; top:0px; height:100px"><br>
+
+<img src="slap.png" width="100px" id="slap.png" style="position:absolute; z-index:-1; left:0px; top:0px; height:100px"><br>
 
 <table border=15 align = center>
 
@@ -21,7 +26,7 @@
    parseInt(document.getElementById('slap.png').style.top) - 10 + 'px' 
 }"></td>
 
-<tr><td><input type=button id="UR" value="Go Up Right" onclick="{
+<td><input type=button id="UR" value="Go Up Right" onclick="{
    document.getElementById('slap.png').style.left = 
    parseInt(document.getElementById('slap.png').style.left) + 10 + 'px'
       document.getElementById('slap.png').style.top = 
@@ -33,7 +38,7 @@
    document.getElementById('slap.png').style.left = 
    parseInt(document.getElementById('slap.png').style.left) - 10 + 'px' 
 }"></td>
-<td>.</td>
+<td>No button</td>
 
 <td><input type=button id="R" value="Go Right" onclick="{
    document.getElementById('slap.png').style.left = 
@@ -63,9 +68,7 @@
 </table>
 
 
-<input type=text value=""  onkeydown = "{
-   if (keydown = 'w') { document.getElementById('slap.png').style.top = 
-   parseInt(document.getElementById('slap.png').style.top) - 10 + 'px'} else {} }">
+
    
 
 
