@@ -1,6 +1,10 @@
 <h2 align=center> Auto move Tanner </h2>
-<img src="slap.png" id="slap.png" style="position:relative;
-z-index:-1; left:0px; top:0px; height:100px; width:100px;">
+<body onMouseMove="{
+   document.all.myLocation.value = 'left: '+event.x+', top: '+ event.y
+}">
+
+<img src="slap.png" id="slap.png" style="position:absolute;
+z-index:-1; left:0px; top:0px; height:100px; width:100px;"><br><br><br>
 
 <input type=button value='right' onclick ="{
    document.getElementById('slap.png').style.left = 
@@ -27,14 +31,37 @@ z-index:-1; left:0px; top:0px; height:100px; width:100px;">
    myLooping = setInterval(function(){
       document.getElementById('slap.png').style.left = parseInt(document.getElementById('slap.png').style.left) - 10 + 'px'
 
-      if (parseInt(document.getElementById('slap.png').style.left) > 0){
-         document.getElementById('slap.png').style.left ='600px'
+      if (parseInt(document.getElementById('slap.png').style.left) = '0px'){
+         document.getElementById('slap.png').style.left = '0px'
       }
 
  }, 60)
 }">
+<input type=button value="AutoDown" onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+      document.getElementById('slap.png').style.top = parseInt(document.getElementById('slap.png').style.top) + 10 + 'px'
 
+      if (parseInt(document.getElementById('slap.png').style.top) = '0px'){
+         document.getElementById('slap.png').style.top = '0px'
+      }
 
+ }, 60)
+}">
+<input type=button value="AutoUp" onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+      document.getElementById('slap.png').style.top = parseInt(document.getElementById('slap.png').style.top) - 10 + 'px'
+
+      if (parseInt(document.getElementById('slap.png').style.top) = '-1px'){
+         document.getElementById('slap.png').style.top = '0px'
+      }
+
+ }, 60)
+}">
+<input type=button value="Stop it" onclick="{
+   clearInterval(myLooping)}">
+<input type=text id="myLocation" value=0 size=15>
 
 </body>
 </html>
