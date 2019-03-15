@@ -1,5 +1,11 @@
 <h1 align=center> All Javascript by Tanner </h1>
-
+<body onkeydown="{
+   
+   if (event.key == 'w' ) {
+   document.all.myText01.value = 
+   '+1 to Tanners mark'
+   }   
+}">
 <script>
 function my01(){
    document.all.myArea01.value = 'wow it worked'
@@ -43,10 +49,12 @@ function my01(){
       document.all.myArea01.value += myArray[1] + ','
    }
 }">
-<input type =button value="Hints" onclick="{
+
+<input type=button value="Hints" onclick="{
    document.all.myArea01.value = 
-   '1 You can press W to activate an event 2 You can just give me my marks instead of making me copy paste the same code over and over again 3 this is really easy'
-   }"><br>
+   '1 You can press w to activate an event 2 You can just give me my marks instead of making me copy paste the same code over and over again 3 this is really easy'
+
+}"><br>
 
 
 
@@ -89,7 +97,7 @@ function myFunction02() { document.all.myDiv01.innerHTML = 'You removed your mou
 function myFunction03() { document.all.myDiv01.innerHTML = 'You entered your mouse'
 }
 </script>
-<input type=button value=" Event 5?Change something on the webpage" onclick="{
+<input type=button value="Event 5?Change something on the webpage" onclick="{
    document.all.myArea01.value = 'Woah this is sooooooooo coool +1 for tanners mark'
    }">
 
