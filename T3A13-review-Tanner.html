@@ -1,0 +1,53 @@
+<h2 align=center> Review <h2>
+<script> var myLooping = 0 </script>
+<div id="myDiv01"> MyDiv01 </div>
+<input type=button value=Test onclick="{
+  document.all.myDiv01.innerHTML = 'Yo'
+}">
+
+<input value=Press type=button onclick="{
+   document.all.myDiv01.innerHTML = `
+   <ol>
+   <li>  Input/Output
+   <li>  Variables
+   <li>  Arrays
+   <li>  Events
+   <li>  Loops
+   <li>  Desicions
+   <li>  objects
+   <li>  Classes 
+   <li>  Functions
+   </ol>`
+}">
+<br>
+<input type=text value="Input" id="myText01"><br>
+<input type=text value="Output" id="myText02"><br>
+<input type=text value="Decision" id="myText03"><br>
+
+<input type=button value="The Basics" onclick="{ 
+   x = (document.all.myText01.value)
+   myVariable = x 
+   document.all.myText02.value = myVariable
+   if(myVariable == 3){document.all.myText03.value = 'Correct'}else{document.all.myText03.value = 'Incorrect'}
+}">
+<br>
+<input type=button value="Loops" onclick="{
+   clearInterval(myLooping)
+   myLooping = setInterval(function(){
+   document.all.myText04.value = parseInt(document.all.myText04.value) + 1}, 600)
+   }">
+<input type=button value="Stop" onclick="{ 
+  clearInterval(myLooping)
+}">
+<input type=text value="1" id="myText04">
+
+
+
+
+
+
+
+
+
+
+   
