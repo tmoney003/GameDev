@@ -27,32 +27,31 @@ parseInt(document.getElementById('slap.png').style.top) - 10 + 'px'
 parseInt(document.getElementById('slap.png').style.left) - 10 + 'px'
    }   // d= go left
 
-//2-------------------------------------------------------------------------
-   if (event.key == 39 ) {
+   if (event.key == 'ArrowRight' ) {
    document.getElementById('Mario.jfif').style.left = 
-parseInt(document.getElementById('Mario.gif').style.left) + 10 + 'px'
+parseInt(document.getElementById('Mario.jfif').style.left) + 10 + 'px'
    }   // Arrow Right= go right 
 
 
-   if (event.key == 's') {
+   if (event.key == 'ArrowDown') {
 document.getElementById('Mario.jfif').style.top =
-parseInt(document.getElementById('Mario.gif').style.top) + 10 + 'px'
-   }   // s= go down
+parseInt(document.getElementById('Mario.jfif').style.top) + 10 + 'px'
+   }   // Arrow Down= go down
 
 
-    if (event.key == 'w') {
-document.getElementById('Mario.gif').style.top =
-parseInt(document.getElementById('Mario.gif').style.top) - 10 + 'px'
-   }   // w= go up
+    if (event.key == 'ArrowUp') {
+document.getElementById('Mario.jfif').style.top =
+parseInt(document.getElementById('Mario.jfif').style.top) - 10 + 'px'
+   }   // Arrow Up= go up
 
 
-  if (event.key == 'a' ) {
-   document.getElementById('Mario.gif').style.left = 
-parseInt(document.getElementById('Mario.gif').style.left) - 10 + 'px'
-   }   // d= go left
+  if (event.key == 'ArrowLeft' ) {
+   document.getElementById('Mario.jfif').style.left = 
+parseInt(document.getElementById('Mario.jfif').style.left) - 10 + 'px'
+   }   // ARrow Key Right= go left
 
 
 }">
-
-<img src="slap.png" width="100px" id="slap.png" style="position:relative; z-index:-1; left:0px; top:0px; height:100px"><br>
-<img src="Mario.jfif" width="100px" id="slap.png" style="position:relative; z-index:-1; left:0px; top:0px; height:100px"><br>
+<br><br><br><br><br><br><br><br><br>There is also arrow keys
+<img src="slap.png" width="100px" id="slap.png" style="position:absolute; z-index:-1; left:0px; top:0px; height:100px"><br>
+<img src="Mario.jfif" width="100px" id="Mario.jfif" style="position:absolute; z-index:-1; left:0px; top:100px; height:100px"><br>
