@@ -17,7 +17,7 @@
    myDog.myShow()
   
 }"><br><br>
-
+<input type=text placeHolder="input" id="Input">
 <div id="myDiv01">...</div><br>
 
 <script src='https://code.responsivevoice.org/responsivevoice.js'></script>
@@ -27,7 +27,7 @@
 }"><br><br>
 
 <input type=button value="Initialize Speak" onclick="{
-   responsiveVoice.speak('Classes make you seem like a better programmer than you are',
+   responsiveVoice.speak(document.getElementById('Input').value,
 'US English Female',
 {pitch: 1, rate: 1, volume : 1})
 }"><br><br>
