@@ -1,0 +1,71 @@
+<h2 align=center> Canvas Drawing </h2>
+
+You use loops and variables to make fast fancy drawings <br>
+<input type=button value=".lineTo(0,200)" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 2;
+   myContext.moveTo(0,0);
+   myContext.lineTo(600,600); 
+   myContext.strokeStyle = 'black';
+   myContext.stroke();
+}">
+
+<input type=button value=".arc(95, 50, 40, 0, 2 * Math.PI)" onclick="{
+   myContext.beginPath();
+   myContext.lineWidth = 10;
+   myContext.strokeStyle = 'grey';
+   myContext.arc(95, 50, 40, 0, 2 * Math.PI);
+   myContext.stroke();
+
+}">
+
+<input type=button value=".fillText('Hello World', 400, 100)" onclick="{
+   
+   myContext.font = '20px Arial';
+   myContext.fillText('Hello World',400,100);
+
+   myContext.translate(400,100);
+   myContext.rotate(90 * Math.PI / 180 );
+
+   myContext.fillText('Hello World', 10, 10);
+   myContext.stroke();
+
+   myContext.resetTransform();
+   //myContext.rotate(-90 * Math.PI / 180);
+}">
+
+
+<input type=button value=".quadraticCurveTo(100,220,240,110)" onclick="{
+   myContext.beginPath();
+   myContext.moveTo(300,100);
+   myContext.quadraticCurveTo(100,220,240,110);
+   myContext.stroke();
+}">
+
+<input type=button value=".createlinearGradient(100,300,200,400)" onclick="{
+   let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
+   myGradient.addColorStop(0, 'red');
+   myGradient.addColorStop(1, 'blue');
+   myGradient.addColorStop(.5, 'yellow');
+
+   myContext.fillStyle = myGradient;
+myContext.fillRect(100, 300, 200, 400)
+   // reset fillstyle
+   myContext.fillStyle = 'black';
+}">
+
+<input type=button value="clearRect" onclick="{
+   myContext.clearRect(100,300,200,400);
+}">
+
+<input type=button value="Clear All" onclick="{
+   myContext.clearRect(0, 0, myCanvas.width, myCanvas.height);
+}">
+
+
+<canvas id="myCoolTag" width="600" height="600" style="border:1px solid #000000;"></canvas>
+
+<script>
+   let myCanvas=document.getElementById('myCoolTag');
+   let myContext=myCanvas.getContext('2d');
+</script>

@@ -1,0 +1,148 @@
+<h2 align=center> Tanners attempt at encrypting </h2>
+<textarea id="myArea01" rows=4 cols=70> Hello how are you</textarea><br>
+
+<input type=button value="Encrypt" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea01').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop]
+      if (myString[myLoop] == 'a') {myTemp = 'z'}
+      if (myString[myLoop] == 'b') {myTemp = 'x'}
+      if (myString[myLoop] == 'c') {myTemp = 'c'}
+      if (myString[myLoop] == 'd') {myTemp = 'v'}
+      if (myString[myLoop] == 'e') {myTemp = 'b'}
+      if (myString[myLoop] == 'f') {myTemp = 'n'}
+      if (myString[myLoop] == 'g') {myTemp = 'm'}
+      if (myString[myLoop] == 'h') {myTemp = 'a'}
+      if (myString[myLoop] == 'i') {myTemp = 's'}
+      if (myString[myLoop] == 'j') {myTemp = 'd'}
+      if (myString[myLoop] == 'k') {myTemp = 'f'}
+      if (myString[myLoop] == 'l') {myTemp = 'g'}
+      if (myString[myLoop] == 'm') {myTemp = 'h'}
+      if (myString[myLoop] == 'n') {myTemp = 'j'}
+      if (myString[myLoop] == 'o') {myTemp = 'k'}
+      if (myString[myLoop] == 'p') {myTemp = 'l'}
+      if (myString[myLoop] == 'q') {myTemp = 'q'}
+      if (myString[myLoop] == 'r') {myTemp = 'w'}
+      if (myString[myLoop] == 's') {myTemp = 'e'}
+      if (myString[myLoop] == 't') {myTemp = 'r'}
+      if (myString[myLoop] == 'u') {myTemp = 't'}
+      if (myString[myLoop] == 'v') {myTemp = 'y'}
+      if (myString[myLoop] == 'w') {myTemp = 'u'}
+      if (myString[myLoop] == 'x') {myTemp = 'i'}
+      if (myString[myLoop] == 'y') {myTemp = 'o'}
+      if (myString[myLoop] == 'z') {myTemp = 'p'}
+
+myString[myLoop] = myTemp
+}
+
+   document.getElementById('myArea02').value = myString.join('')
+}"> 
+<input type=button value=" Encrypt Using Ascii Numbers" onclick="{
+ let myString = document.getElementById('myArea01').value.toLowerCase()
+ let myTemp =''
+    for (let x=0; x < myString.length; x++){
+       myTemp += String.fromCharCode(myString.charCodeAt(x)+1)
+   }
+   document.getElementById('myArea02').value = myTemp
+}">
+<input type=button value="64 Encoding" onclick="{ 
+   myFunction1()
+}">
+<script>
+function myFunction1() { 
+   var str = document.getElementById('myArea01').value.toLowerCase();
+   var enc = window.btoa(str);
+    
+   document.getElementById('myArea02').value = enc
+}
+
+</script>
+
+
+<br>
+<textarea id="myArea02" rows=4 cols=70></textarea><br>
+
+<input type=button value="Decrypt" onclick="{
+   let myTemp = ''
+   myString = document.getElementById('myArea02').value.toLowerCase().split('')
+   for (let myLoop=0;   myLoop < myString.length; myLoop++){
+      myTemp = myString[myLoop] 
+      
+
+      if (myString[myLoop] == 'z') {myTemp = 'a'}
+      if (myString[myLoop] == 'x') {myTemp = 'b'}
+      if (myString[myLoop] == 'c') {myTemp = 'c'}
+      if (myString[myLoop] == 'v') {myTemp = 'd'}
+      if (myString[myLoop] == 'b') {myTemp = 'e'}
+      if (myString[myLoop] == 'n') {myTemp = 'f'}
+      if (myString[myLoop] == 'm') {myTemp = 'g'}
+      if (myString[myLoop] == 'a') {myTemp = 'h'}
+      if (myString[myLoop] == 's') {myTemp = 'i'}
+      if (myString[myLoop] == 'd') {myTemp = 'j'}
+      if (myString[myLoop] == 'f') {myTemp = 'k'}
+      if (myString[myLoop] == 'g') {myTemp = 'l'}
+      if (myString[myLoop] == 'h') {myTemp = 'm'}
+      if (myString[myLoop] == 'j') {myTemp = 'n'}
+      if (myString[myLoop] == 'k') {myTemp = 'o'}
+      if (myString[myLoop] == 'l') {myTemp = 'p'}
+      if (myString[myLoop] == 'q') {myTemp = 'q'}
+      if (myString[myLoop] == 'w') {myTemp = 'r'}
+      if (myString[myLoop] == 'e') {myTemp = 's'}
+      if (myString[myLoop] == 'r') {myTemp = 't'}
+      if (myString[myLoop] == 't') {myTemp = 'u'}
+      if (myString[myLoop] == 'y') {myTemp = 'v'}
+      if (myString[myLoop] == 'u') {myTemp = 'w'}
+      if (myString[myLoop] == 'i') {myTemp = 'x'}
+      if (myString[myLoop] == 'o') {myTemp = 'y'}
+      if (myString[myLoop] == 'p') {myTemp = 'z'}
+
+
+
+      myString[myLoop] = myTemp
+
+   }
+   document.getElementById('myArea03').value = myString.join('')
+}">
+
+<input type=button value=" Decrypt Using Ascii Numbers" onclick="{
+ let myString = document.getElementById('myArea02').value.toLowerCase()
+ let myTemp =''
+   for (let x=0; x < myString.length; x++){
+      myTemp += String.fromCharCode(myString.charCodeAt(x)-1)
+   }
+   document.getElementById('myArea03').value = myTemp
+}">
+<input type=button value="Decrypt 64" onclick="{
+ myFunction2()
+ }">
+<script>
+function myFunction2() { 
+   var str = document.getElementById('myArea02').value;
+   var dec = window.atob(str);
+    
+   document.getElementById('myArea03').value = dec
+}
+
+</script>
+
+
+
+
+
+
+<br>
+<br>
+
+<textarea id="myArea03" rows=4 cols=70></textarea><br>
+
+
+
+
+
+
+
+
+
+
+
