@@ -1,0 +1,231 @@
+<h2 align=center> Codebreaker </h2>
+
+
+
+<body 
+onload="myCheck()"
+onload="myCheck1()"
+
+onMouseMove="{
+   document.all.myLocation.value = 'left: '+event.x+', top: '+ event.y
+    }"
+  onkeydown="{
+   
+   if (event.key == 'd' ) {
+   document.getElementById('key.png').style.left = 
+parseInt(document.getElementById('key.png').style.left) + 10 + 'px'
+   }   // d= go right 
+
+
+   if (event.key == 's') {
+document.getElementById('key.png').style.top =
+parseInt(document.getElementById('key.png').style.top) + 10 + 'px'
+   }   // s= go down
+
+
+    if (event.key == 'w') {
+document.getElementById('key.png').style.top =
+parseInt(document.getElementById('key.png').style.top) - 10 + 'px'
+   }   // w= go up
+
+
+   if (event.key == 'a' ) {
+   document.getElementById('key.png').style.left = 
+parseInt(document.getElementById('key.png').style.left) - 10 + 'px'
+   }   // a= go left
+
+  if (event.which == 32) { myStartLoop() 
+}}"
+   onkeyup="{ if (event.which == 32) {clearInterval(myLooping1)}
+   }">
+
+
+
+
+
+
+
+
+<script> var myLooping1 = 0 // check666 Loop
+         var myLooping2 = 0 // checkKey Loop  
+         var myLooping3 = 0 // CheckANS Loop
+         var myX1 = false   // Key 1 
+         var myY1 = false   // Key 2
+         var myZ1 = false   // Key 3
+         var myA1 = false   // Puzzle 1, keys
+         var myA2 = false   // Puzzle 2, 666
+         var myA3 = false   // Puzzle 3, 369
+         var myAF = false   // Final answer 
+</script>
+
+
+
+
+
+
+<script>
+function myStartLoop(){
+
+clearInterval(myLooping1)
+   myLooping1 = setInterval(function(){
+     document.getElementById('myLoop').value = parseInt(document.getElementById('myLoop').value) + 6
+
+
+if (parseInt(document.getElementById('myLoop').value) >= 1000){
+  document.getElementById('myLoop').value = 0
+}
+
+}, 10)
+}
+
+
+
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+</script>
+
+
+<script>
+
+   function myCheck(){ 
+clearInterval(myLooping2)
+   myLooping2 = setInterval(function(){
+     
+   if (myHitOther('key.png','lock1')&&(myX1 == false)&&(myY1 == false)&&(myZ1 == true)){
+      document.getElementById('open1').style.zIndex = "2"
+   myX1 = true;
+   
+};
+
+   if (myHitOther('key.png','lock2')&&(myX1 == true)&&(myY1 == false)&&(myZ1 == true)){
+      document.getElementById('open2').style.zIndex = "2" 
+   myY1 = true;
+   
+};
+
+   if (myHitOther('key.png','lock3')&&(myX1 == false)&&(myY1 == false)&&(myZ1 == false)){
+      document.getElementById('open3').style.zIndex = "2"
+   myZ1 = true;
+   
+}; 
+
+   if ((myX1 == true)&&(myY1 == true)&&(myZ1 == true)){document.all.mytext6.value = 'Open';
+    myA1 = true
+};
+   
+   if ((myA1 == true)&&(myA2 == true)&&(myA3 == true)){ myAF = true
+};
+   if (myAF == true){alert('Winner Winner Chicken Dinner');    location="file:///C:/Users/438310/OneDrive/Documents/Geringer.Tanner-GameDev12-2019/T4A100-AttemptAtPong-Tanner.html"
+};
+   
+}, 1000)
+   
+}
+</script>
+
+<br>
+<br>
+<br>
+<br>
+<input type=text value="Open/Closed" id="mytext6" style="position:absolute; left:735px; top:60px; width:100px;">
+
+
+<a href="https://www.biblegateway.com/passage/?search=Revelation+13%3A18&version=KJV"> Book of Revelations 13:18
+</a><br>Hint: Press Spacebar to change the desired number
+<br>
+
+
+<input type=text id="myLoop" size="7" value="0" readonly>
+
+
+<input type=button value="Open" id="start" onclick="{ 
+   if (document.all.myLoop.value == 666){document.all.mytext5.value = 'Open'} else {document.all.mytext5.value = 'Closed'}
+   if (document.all.mytext5.value == 'Open'){myA2 = true}
+}">
+<input type=text value="Open/Closed" id="mytext5" size=7 readonly>
+<br>
+
+<input type=text id="myLocation" value=0 size=15 readonly> 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<a href="https://genius.com/Riton-and-kah-lo-fake-id-lyrics">How many girls wanna drink wine?</a><br>
+<input type=text placeholder="#1" id="mytext1" size=1>
+<input type=text placeholder="#2" id="mytext2" size=1>
+<input type=text placeholder="#3" id="mytext3" size=1>
+
+
+<input type=button value="Open"  onclick="{ 
+
+   if ((document.all.mytext1.value == 3) && (document.all.mytext2.value == 6) && (document.all.mytext3.value == 9)){document.all.mytext4.value = 'Open'}else {document.all.mytext4.value = 'Closed'};
+   if (document.all.mytext4.value == 'Open'){
+   myA3 = true};
+
+
+}">
+ 
+<input type=text value="Open/Closed" id="mytext4" size=7 readonly><br>
+
+
+<input type=button value="F5" onclick="{ document.location.reload()}">
+
+
+<div id="myDiv1" style="position:absolute; left:700px; top:50px; height:50px; width:100px;">
+<h2>312</h2>
+</div>
+
+
+
+
+
+
+
+
+
+
+<img src="key.png" id="key.png"
+style="position:absolute; z-index:3; left:50px; top:210px; height:50px; width:150px;">  
+
+<img src="lock.png" id="lock1"
+style="position:absolute; z-index:1; left:700px; top:100px; height:100px; width:100px;">
+<img src="lock.png" id="lock2"
+style="position:absolute; z-index:1; left:700px; top:275px; height:100px; width:100px;">
+<img src="lock.png" id="lock3"
+style="position:absolute; z-index:1; left:700px; top:450px; height:100px; width:100px;">
+
+
+<img src="blank.png" id="open1"
+style="position:absolute; z-index:0; left:700px; top:100px; height:100px; width:100px;">
+<img src="blank.png" id="open2"
+style="position:absolute; z-index:0; left:700px; top:275px; height:100px; width:100px;">
+<img src="blank.png" id="open3"
+style="position:absolute; z-index:0; left:700px; top:450px; height:100px; width:100px;">
+
+
+
+
+
+
+
+
+
+
